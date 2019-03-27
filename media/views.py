@@ -1,12 +1,26 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse, Http404,HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+from .models import Album,user
 
-@login_required(login_url='/accounts/login/')
-def welcome(request):
 
+def welcome (request):
+    album  = Album.objects.all()
+   
+    avata  = user.objects.all()
+    userd=None
     
-    return render(request, 'welcome.html')
-def details (request,user_id):
+    for imagesd in avata:
+        userd=imagesd
+    getuse={'name':album}
+    prifiles={'user':userd}
 
-    return HttpResponse('<h1>welcome home </h1>')
+    return render(request,'index.html',{'user':userd,'name':album})
+def details (request,user_id):
+        try:
+            album = Album.objects.get(pk=user_id)
+        except Album.DowsNoteExist:
+            raise Http404('user nta wurimo muri database')
+        return render(request,'welcome.html',{'bazimy':album})
+def allimages(request):
+    return render(request,'allimages.html')

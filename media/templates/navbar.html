@@ -1,18 +1,99 @@
+{% load bootstrap3 %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>instagram</title>
 </head>
+<style>
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
+}
+
+.example2 .navbar-brand>img {
+  padding: 7px 15px;
+}
+
+.brand-centered .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.navbar-toggle {
+    z-index: 1;
+}
+
+
+
+
+/* CSS Transform Align Navbar Brand Text ... This could also be achieved with table / table-cells */
+.navbar-alignit .navbar-header {
+	  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 50px;
+}
+.navbar-alignit .navbar-brand {
+	top: 50%;
+	display: block;
+	position: relative;
+	height: auto;
+	transform: translate(0,-50%);
+	margin-right: 15px;
+  margin-left: 15px;
+}
+
+.navbar-nav>li>.dropdown-menu {
+	z-index: 9999;
+}
+
+body {
+  font-family: "Lato";
+}
+</style>
 <body>
-        <ul class="nav nav-tabs">
-                <li role="presentation" class="active"><a href="#">Home</a></li>
-                <li role="presentation"><a href="#">Profile</a></li>
-                <li role="presentation"><a href="#">Messages</a></li>
-                <li role="presentation"><a href="kigali"></a></li>
-                <img src="https://cdn2.iconfinder.com/data/icons/instagram-ui/48/jee-75-512.png" alt="..." class="img-circle" style="margin-left: 90%;width:25px,haight:25px">
-              </ul>ecommerceecommerce
+  
+    <div class="container example2">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{%url 'allimages'%}"><img src="https://sunrisesurfshop.com/wp-content/uploads/2017/05/instagram-new-2016-glyph-logo-format-eps-instagram-logo-clipart-png-300_300.png" alt="Dispute Bills">
+            </a>
+            <a class="navbar-brand" href="#"><img src="https://tamebay.com/wp-content/uploads/2016/11/Instagram.jpg" alt="Dispute Bills">
+            </a>
+          </div>
+          <div id="navbar2" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <a class="navbar-brand" href="{% url 'allimages' %}"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEEop-eJoxaheX3XsJwn0CkHTE6D3_O0wF2RL1hQ9lNW1ApnS1" alt="Dispute Bills">
+                </a>
+              <a class="navbar-brand" href="{% url 'instagram' %}"><img src="https://images.vexels.com/media/users/3/139191/isolated/preview/3511e4391d248f05429b90f35248689e-amor-do-cora--o-do-valentim-by-vexels.png" alt="Dispute Bills">
+              </a>
+               <a class="navbar-brand" href="{% url 'instagram' %}"><img src="https://images.vexels.com/media/users/3/147103/isolated/preview/e9bf9a44d83e00b1535324b0fda6e91a-instagram-profile-line-icon-by-vexels.png" alt="Dispute Bills">
+              </a>
               
+            </ul>
+          </div>
+          <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+      </nav>
+    </div>
+    
+  
+    
+    
 </body>
 </html>
+

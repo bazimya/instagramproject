@@ -1,0 +1,37 @@
+                    List of relations
+ Schema |             Name              | Type  |  Owner  
+--------+-------------------------------+-------+---------
+ public | account_emailaddress          | table | saphani
+ public | account_emailconfirmation     | table | saphani
+ public | auth_group                    | table | saphani
+ public | auth_group_permissions        | table | saphani
+ public | auth_permission               | table | saphani
+ public | auth_user                     | table | saphani
+ public | auth_user_groups              | table | saphani
+ public | auth_user_user_permissions    | table | saphani
+ public | django_admin_log              | table | saphani
+ public | django_content_type           | table | saphani
+ public | django_migrations             | table | saphani
+ public | django_session                | table | saphani
+ public | django_site                   | table | saphani
+ public | media_album                   | table | saphani
+ public | media_comment                 | table | saphani
+ public | media_comment_photo           | table | saphani
+ public | media_comment_tag             | table | saphani
+ public | media_following               | table | saphani
+ public | media_location                | table | saphani
+ public | media_photo                   | table | saphani
+ public | media_photo_Album             | table | saphani
+ public | media_photo_location          | table | saphani
+ public | media_photo_user              | table | saphani
+ public | media_tag                     | table | saphani
+ public | media_tag_photo               | table | saphani
+ public | media_user                    | table | saphani
+ public | media_usertofollow            | table | saphani
+ public | media_usertofollow_following  | table | saphani
+ public | socialaccount_socialaccount   | table | saphani
+ public | socialaccount_socialapp       | table | saphani
+ public | socialaccount_socialapp_sites | table | saphani
+ public | socialaccount_socialtoken     | table | saphani
+(32 rows)
+

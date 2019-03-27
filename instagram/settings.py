@@ -87,11 +87,15 @@ WSGI_APPLICATION = 'instagram.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'inst',
+        'USER': 'saphani',
+    'PASSWORD':'12456',
     }
 }
-
+TIME_ZONE = 'Africa/Kigali'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -138,3 +142,5 @@ AUTHENTICATION_BACKENDS = (
 )
 SITE_ID = 1
 LOGIN_REDIRECT_URL="/profile"
+MEDIA_URL = '/pic/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'pic')

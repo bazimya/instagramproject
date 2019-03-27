@@ -1,0 +1,49 @@
+
+{% load bootstrap3 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    {% block styles %}
+    {% bootstrap_css %}
+    {% endblock %}
+       
+</head>
+<body>
+    {% include "navbar.html" %} 
+    <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                 <input type="file" id="imgupload" style="display:none"/> 
+              
+                        <button style="border-radius: 50%;" id="OpenImgUpload">
+                <img src="{{user.profile.url}}" class="img-circle" alt="Cinque Terre" width="304" height="236"> 
+        </button>
+        <script>$('#OpenImgUpload').click(function(){ $('#imgupload').trigger('click'); });
+                </script>
+               </div>
+              <div class="col-sm-4" style="margin-top: 5em">
+                <div class="row">
+                        <div class="col-sm-6" style="margin-top: 2em; padding-right: 0em">
+                                <a href="follows.html" style="font-size: 2em">FOLLOWS</a><br>
+                        <label style="font-size: 2em">1000</label>
+                           
+                               </div>
+                               <div class="col-sm-4" style="margin-top: 2em; padding-right: 0em">
+                                    <a href="following.html" style="font-size: 2em">FOLLOWINGS</a><br>
+                                    <label style="font-size: 2em">25</label>
+                               
+                                   </div>
+               
+                    </div>
+                  
+              </div>
+              </div>
+              
+  
+</body>
+</html>
+
