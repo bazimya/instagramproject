@@ -1,12 +1,17 @@
 from django.db import models
 from django.core.validators import MaxValueValidator
+from django.contrib.auth.models import User
+from tinymce.models import HTMLField
 
 class user(models.Model):
     firstname=models.CharField(max_length=25, null=True)
     lastname=models.CharField(max_length=250,null=True)
     email= models.CharField(max_length=200,null=True)
-    profile =models.FileField(null=True,blank=True)
-   
+    profile = models.ImageField(upload_to = 'images/', null=True)
+    curentus= models.ForeignKey(User, null=True)
+    
+    def update_user(id, firstname, lastname, profile,email):
+        return user.objects.filter(id=id).update(firstname=firstname, lastname=lastname, profile=profile,email=email)
    
 
 class location(models.Model):

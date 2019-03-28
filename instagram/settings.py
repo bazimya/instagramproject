@@ -31,24 +31,24 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'media.apps.MediaConfig',
+    'bootstrap3',
     'django.contrib.sites',
-
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    
+    'tinymce',
 
-    'media.apps.MediaConfig',
-    'bootstrap3',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'allauth.socialaccount.providers.facebook',
-    'allauth.socialaccount.providers.github',
-    'allauth.socialaccount.providers.google',
+    # 'allauth.socialaccount.providers.facebook',
+    # 'allauth.socialaccount.providers.github',
+    # 'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
@@ -74,6 +74,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -141,6 +142,6 @@ AUTHENTICATION_BACKENDS = (
    
 )
 SITE_ID = 1
-LOGIN_REDIRECT_URL="/profile"
+LOGIN_REDIRECT_URL="/"
 MEDIA_URL = '/pic/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'pic')
